@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+
+/* Header Section Style */
+.header{
+	.navbar{
+		@include min-xl {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		&-brand{
+			--bs-navbar-brand-color: #{$color-text};
+		}
+
+		&-toggler{
+			font-size: 1rem;
+			color: unset;
+			z-index: 8;
+			@extend %transition;
+
+			&[aria-expanded="true"],
+			&:hover
+			{
+				color: $color-primary;
+			}
+		}
+
+		&-nav{
+			@include min-xl{
+				height: 100%;
+			}
+		}
+
+		.nav-link{
+			color: $color-text;
+			font-size: toRem(15);
+			padding: toRem(15) toRem(20);
+
+			&.active,
+			&:hover,
+			&:focus-visible
+			{
+				color: $color-primary;
+			}
+		}
+	}
+}
+
+.dropdown{
+	font-size: toRem(12);
+	&-menu{
+		--bs-dropdown-spacer: 0;
+		--bs-dropdown-border-width: 0;
+		--bs-dropdown-border-radius: 0;
+		--bs-dropdown-link-active-bg: #{$color-primary};
+	}
+
+	&-item{
+		font-size: toRem(14);
+	}
+}

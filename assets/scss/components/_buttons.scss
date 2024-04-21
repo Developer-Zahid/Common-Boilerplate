@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+/* Common Button's Style */
+.btn{
+	box-shadow: none !important;
+}
+
+.btn-primary{
+	--bs-btn-bg: inherit;
+	--bs-btn-border-color: inherit;
+
+	--bs-btn-hover-bg: inherit;
+	--bs-btn-hover-border-color: inherit;
+
+	--bs-btn-active-bg: inherit;
+	--bs-btn-active-border-color: inherit;
+
+	&:focus{
+		color: inherit;
+	}
+}
+
+.scroll-top{
+	bottom: toRem(15);
+	right: toRem(15);
+	display: none;
+	cursor: pointer;
+	z-index: 7;
+
+	&__btn{
+		width: toRem(30);
+		height: toRem(30);
+		font-size: 1.1rem;
+		color: $color-white;
+		background-color: $color-primary;
+	}
+}

@@ -1,0 +1,23 @@
+@use './function' as *;
+
+// SCSS Variable's
+$scss-font-primary: 'Poppins', sans-serif;
+$font-primary: var(--font-primary);
+
+$scss-color-primary:#1BFAAD;
+$scss-color-primary-rgb: toRGB($scss-color-primary);
+$color-primary: var(--color-primary);
+$color-primary-rgb: var(--color-primary-rgb);
+
+$scss-color-text--light: #000000;
+$scss-color-text--dark: #ffffff;
+$color-text: var(--color-text);
+
+$scss-color-body-bg--light: #ffffff;
+$scss-color-body-bg--dark: #000000;
+$color-body-bg: var(--color-body-bg);
+
+$color-black:#000000;
+$color-white:#ffffff;
+
+$gutter: 24px;
